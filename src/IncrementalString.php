@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Cheezykins\StringIncrementer;
-
 
 use Cheezykins\StringIncrementer\Exceptions\InvalidSymbolException;
 
@@ -18,9 +16,10 @@ class IncrementalString
     /**
      * IncrementalString constructor.
      *
-     * @param string $start
-     * @throws InvalidSymbolException
+     * @param string      $start
      * @param string|null $alphabet
+     *
+     * @throws InvalidSymbolException
      */
     public function __construct($start = '', $alphabet = null)
     {
@@ -28,16 +27,18 @@ class IncrementalString
             $alphabet = self::DEFAULT_ALPHABET;
         }
         if ($start !== '' && !self::verifyAgainstAlphabet($start, $alphabet)) {
-            throw new InvalidSymbolException("The start string contains invalid characters");
+            throw new InvalidSymbolException('The start string contains invalid characters');
         }
         $this->setAlphabet($alphabet);
         $this->setCurrentString($start);
     }
 
     /**
-     * Validates that the given string is valid against the given alphabet
+     * Validates that the given string is valid against the given alphabet.
+     *
      * @param $string string
      * @param $alphabet string|string[]
+     *
      * @return bool
      */
     protected static function verifyAgainstAlphabet($string, $alphabet)
@@ -51,6 +52,7 @@ class IncrementalString
                 return false;
             }
         }
+
         return true;
     }
 
@@ -66,12 +68,13 @@ class IncrementalString
 
     /**
      * @param string $start
+     *
      * @throws InvalidSymbolException
      */
     public function setCurrentString($start)
     {
         if ($start !== '' && !self::verifyAgainstAlphabet($start, $this->alphabet)) {
-            throw new InvalidSymbolException("The given string contains invalid characters");
+            throw new InvalidSymbolException('The given string contains invalid characters');
         }
 
         if ($start === '') {
@@ -92,7 +95,9 @@ class IncrementalString
     /**
      * Increment the current string by a given number of times and returns
      * the new value.
+     *
      * @param int $amount
+     *
      * @return string
      */
     public function increment($amount = 1)
@@ -100,12 +105,15 @@ class IncrementalString
         for ($i = 0; $i < $amount; $i++) {
             $this->current = $this->incrementArray($this->current);
         }
+
         return $this->output();
     }
 
     /**
      * Increments the internal array.
+     *
      * @param array|null $array
+     *
      * @return array
      */
     protected function incrementArray($array)
@@ -131,7 +139,9 @@ class IncrementalString
     /**
      * Returns the output but padded to length characters using the start of the
      * given alphabet.
+     *
      * @param $length
+     *
      * @return string
      */
     public function padOutput($length)
@@ -141,6 +151,7 @@ class IncrementalString
 
     /**
      * Returns the current string.
+     *
      * @return string
      */
     public function output()
@@ -150,6 +161,7 @@ class IncrementalString
 
     /**
      * Magic method allowing casting to string.
+     *
      * @return string
      */
     public function __toString()
