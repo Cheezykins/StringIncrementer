@@ -1,10 +1,20 @@
-# StringIncrementer
+# String Incrementer
 An arbitrary symbol and precision string incrementer.
 
 [![Build Status](https://travis-ci.org/Cheezykins/StringIncrementor.svg?branch=master)](https://travis-ci.org/Cheezykins/StringIncrementor)
 [![Code Climate](https://codeclimate.com/github/Cheezykins/StringIncrementer/badges/gpa.svg)](https://codeclimate.com/github/Cheezykins/StringIncrementer)
 [![Test Coverage](https://codeclimate.com/github/Cheezykins/StringIncrementer/badges/coverage.svg)](https://codeclimate.com/github/Cheezykins/StringIncrementer/coverage)
 [![StyleCI](https://styleci.io/repos/61104868/shield)](https://styleci.io/repos/61104868)
+
+## Install
+
+Install using composer.
+
+```
+composer require cheezykins/string-incrementer
+```
+
+## Usage
 
 Usage is very simple.
 
