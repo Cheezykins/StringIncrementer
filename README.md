@@ -1,6 +1,8 @@
 # StringIncrementer
 An arbitrary symbol and precision string incrementer.
 
+[![Build Status](https://travis-ci.org/Cheezykins/StringIncrementor.svg?branch=master)](https://travis-ci.org/Cheezykins/StringIncrementor)
+
 Usage is very simple.
 
 ```php
