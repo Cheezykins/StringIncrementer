@@ -48,7 +48,7 @@ class IncrementalString
             $alphabet = \str_split($alphabet);
         }
         foreach ($elements as $element) {
-            if (!in_array($element, $alphabet)) {
+            if (!\in_array($element, $alphabet)) {
                 return false;
             }
         }
@@ -127,7 +127,7 @@ class IncrementalString
         $value = \array_pop($array);
         $key = \array_search($value, $this->alphabet);
         $key++;
-        if (!array_key_exists($key, $this->alphabet)) {
+        if (!\array_key_exists($key, $this->alphabet)) {
             $key = 0;
             $array = $this->incrementArray($array);
         }
