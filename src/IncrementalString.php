@@ -98,7 +98,7 @@ class IncrementalString
      *
      * @param int $amount
      *
-     * @return string
+     * @return IncrementalString
      */
     public function increment($amount = 1)
     {
