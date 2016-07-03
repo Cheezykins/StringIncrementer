@@ -91,6 +91,14 @@ class IncrementalStringTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('b', $newVal);
     }
 
+    public function testIncrementRetunsInstance()
+    {
+        $inc = new IncrementalString();
+        $this->assertEquals('a', (string) $inc);
+        $newVal = $inc->increment();
+        $this->assertInstanceOf(IncrementalString::class, $newVal);
+    }
+
     public function testPaddedOutput()
     {
         $inc = new IncrementalString('zz', 'abcdefghijklmnopqrstuvwxyz');

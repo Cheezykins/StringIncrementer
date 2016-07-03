@@ -106,7 +106,7 @@ class IncrementalString
             $this->current = $this->incrementArray($this->current);
         }
 
-        return $this->output();
+        return $this;
     }
 
     /**
