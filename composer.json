@@ -11,13 +11,22 @@
   ],
   "autoload": {
     "psr-4": {
-      "Cheezykins\\StringIncrementer\\": "./src",
+      "Cheezykins\\StringIncrementer\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "Cheezykins\\StringIncrementer\\Tests\\": "./tests"
     }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "format": "phpcbf --standard=psr2 src/"
   },
   "require-dev": {
     "phpunit/phpunit": "5.4.*",
     "phpunit/php-code-coverage": "4.0.*",
-    "codeclimate/php-test-reporter": "^0.3.2"
+    "codeclimate/php-test-reporter": "^0.3.2",
+    "squizlabs/php_codesniffer": "^2.6"
   }
 }
